@@ -32,6 +32,7 @@ class WeatherDetailFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(WeatherDetailViewModel::class.java)
+        binding.viewModel = viewModel
         val adapter = WeatherDetailRecyclerAdapter(arrayListOf())
         binding.list.apply {
             this.adapter = adapter
