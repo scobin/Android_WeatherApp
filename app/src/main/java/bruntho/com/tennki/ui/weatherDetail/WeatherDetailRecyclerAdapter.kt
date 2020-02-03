@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import bruntho.com.tennki.R
 import bruntho.com.tennki.model.WeatherResponse
 import bruntho.com.tennki.model.X
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.weather_detail_item.view.*
 import java.time.LocalDateTime
 import java.time.ZoneId
@@ -40,6 +41,10 @@ class WeatherDetailRecyclerAdapter(
         } else {
             holder.itemView.date.text = ""
         }
+
+        Glide.with(holder.itemView)
+            .load("https://openweathermap.org/img/wn/"+ weather.weather[0].icon + "@2x.png")
+            .into(holder.itemView.weather_icon)
     }
 
     fun updateData(response: WeatherResponse?) {
