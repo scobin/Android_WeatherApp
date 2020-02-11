@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/areaListFragment">
+
+    <fragment
+        android:id="@+id/areaListFragment"
+        android:name="bruntho.com.tennki.ui.areaList.AreaListFragment"
+        android:label="area_list_fragment"
+        tools:layout="@layout/area_list_fragment" >
+        <action
+            android:id="@+id/action_areaListFragment_to_weatherDetailFragment"
+            app:destination="@id/weatherDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="bruntho.com.tennki.ui.about.AboutFragment"
+        android:label="about_fragment"
+        tools:layout="@layout/about_fragment" />
+    <fragment
+        android:id="@+id/weatherDetailFragment"
+        android:name="bruntho.com.tennki.ui.weatherDetail.WeatherDetailFragment"
+        android:label="WeatherDetailFragment" />
+</navigation>
